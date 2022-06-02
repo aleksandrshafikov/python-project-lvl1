@@ -13,8 +13,9 @@ jobs:
         with:
           python-version: 3.8
       - name: Install dependencies
-        run: 
+        run: |
           curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
+          poetry add --dev flake8
       - name: Run flake8
         run: make lint      
        
